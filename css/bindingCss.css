@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/**
+ *
+ * @authors Ale cc (you@example.org)
+ * @date    2016-12-06 16:24:19
+ * @version $Id$
+ */
+
+[data-pseudo-content]::before {
+    content: attr(data-pseudo-content);
+}
+.switch {
+    display: inline-block;
+    width: 90px;
+    height: 20px;
+    font-size: 0;
+    border: 1px solid #0082ff;
+    border-radius: 2px;
+}
+.switch span {
+    display: inline-block;
+    width: 44px;
+    font-size: 12px;
+    line-height: 18px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+}
+.switch .switch-item-1 {
+    color: #fff;
+    background-color: #0082ff;
+}
+.switch .switch-item-2 {
+    color: #a8b1c0;
+    background-color: #fff;
+}
+.switch.switched .switch-item-1 {
+    color: #a8b1c0;
+    background-color: #fff;
+}
+.switch.switched .switch-item-2 {
+    color: #fff;
+    background-color: #0082ff;
+}
+.classObject {
+    color: #333;
+}
+.active {
+    color: red;
+}
+.text-danger {
+    padding: 2em;
+    color:orange;
+}
