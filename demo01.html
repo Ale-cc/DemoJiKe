@@ -1,0 +1,23 @@
+<script src="vue.js"></script>
+
+<div id="app">
+  <p>{{ message }}</p>
+  <h3>{{ a }}</h3>
+</div>
+
+<script>
+var vm = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue.js!',
+    a:0
+  },
+  created: function(){
+    this.a = 1;
+    console.log('a is: ' + this.a)
+  },
+  mounted: function(){
+    console.log('a is: ' + this.a)
+  },
+})
+</script>
