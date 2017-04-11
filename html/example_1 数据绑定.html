@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0">
+<title>Vue.js 数据绑定 1</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+	  <h2>Vue.js 数据绑定</h2>
+	  <div id="app">
+	    <!-- <img src="{{{user.photo}}}" /> -->
+	    <img v-bind:src="user.photo" />
+	    <div>姓名：{{user.name}}</div>
+	    <div>简介：{{{user.profile}}}</div>
+	    <div>出生日期：{{user.birthday}}</div>
+	    <div>出生地：{{user.birthood}}</div>
+	  </div>
+	</div>
+	<script src="../js/vue.js"></script>
+<script>
+  var vm = new Vue({
+    el: '#app',
+    data: {
+      user: {
+        photo: 'http://tva1.sinaimg.cn/crop.0.0.400.400.180/6d2828b2jw8f193hei9uij20b40b4mxd.jpg',
+        name: 'Bill Gates',
+        birthday:new Date('1992-10-01'),
+        birthood:'美国华盛顿州西雅图',
+        profile: '<div class="dep"><strong>技术专家</strong>、<strong>商业领袖</strong>与<strong>慈善家</strong>，比尔及梅琳达·盖茨基金会联席主席。</div><div><a href="http://www.weibo.com/gates" target="_blank">访问微博</a></div>'
+      }
+    }
+  })
+</script>
+</body>
+</html>
