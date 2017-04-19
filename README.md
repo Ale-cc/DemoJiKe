@@ -1,3 +1,6 @@
 # DemoJiKe
-demos of jikexueyuan
-极客学院视频
+#Demos of jikexueyuan
+#极客学院视频及练习
+
+##Atom
+#文件名自动补全 advanced-open-file
