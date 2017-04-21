@@ -7,7 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>开发用户信息录入页面</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <script src="../js/vue.js"></script>
   <style>
       h4.form-title {
         margin-bottom: 0;
@@ -78,6 +77,8 @@
       </div>
     </div>
   </div>
+  <script src="../js/vue.js"></script>
+  <script src="../js/idCardValidate.js"></script>
   <script>
   var vm = new Vue({
     el: '#app',
@@ -95,9 +96,12 @@
         var type = this.user.selectCaredType;
         if(type == "ID_Type_01" || type == "ID_Type_07" ){
           this.isShow = !this.isShow;
-        }/*通过绑定点击觉得不够优雅*/
+        }/*通过绑定点击总觉得不够优雅*/
         console.log(type);
       }
+    },
+    watch: {
+      validate:function(){}
     }
   })
   </script>
